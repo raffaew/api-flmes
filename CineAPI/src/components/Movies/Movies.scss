@@ -1,0 +1,27 @@
+.movies {
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .cards {
+    padding: 20px;
+     display: flex;
+      flex-wrap: wrap;
+      width: 100%; 
+      height: 100%;
+      gap: 16px;
+      list-style: none;
+
+    .card{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 400px;
+        cursor: pointer;
+    }
+  }
+}
