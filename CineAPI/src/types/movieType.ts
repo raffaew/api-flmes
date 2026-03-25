@@ -12,10 +12,12 @@ export interface origin_country {
 }
 
 export interface Movie {
+  title: string;
   id: number;
   original_title: string;
   overview: string;
   poster_path: string;
+  backdrop_path: string;
   vote_average: number;
   release_date: string;
   genres: Genre[];
@@ -44,4 +46,5 @@ export interface MovieContextType {
 export interface MovieDetailsContextType {
   movieDetails: Movie | null;
   setMovieDetails: React.Dispatch<React.SetStateAction<Movie | null>>;
+  
 }

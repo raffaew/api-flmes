@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import type { ListMovies, Movie } from "../../types/movieType";
 import { getMovies, getDetails } from "../../services/moviesService";
 import { useSelectContext } from "../../hooks/useSelectContext";
-import SelectCategory from "../SelectCategory/SelectCategory";
 import { useDetailsContext } from "../../hooks/useMovieDetails";
 
 const Movies = () => {
   const [movies, setMovies] = useState<ListMovies | null>(null);
   const [page, setPage] = useState<number>(1);
   const { category } = useSelectContext();
-  const { setMovieDetails } = useDetailsContext();
+  const { setMovieDetails,  } = useDetailsContext();
 
 
   useEffect(() => {
@@ -63,7 +62,7 @@ const Movies = () => {
   return (
    
     <div className="movies">
-       <SelectCategory />
+
       <ul className="cards">
         {movies?.results.map((movie) => (
           <li className="card" key={movie.id} onClick={() => fetchDetails(movie.id)}>

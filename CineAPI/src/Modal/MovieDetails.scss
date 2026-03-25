@@ -1,0 +1,88 @@
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  position: fixed;
+  top: 10%;
+  color: #fff;
+
+  &.hide {
+    display: none;
+  }
+
+  .backdrop {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.699);
+    }
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    position: absolute;
+
+    .poster_path {
+      width: 300px;
+    }
+
+    .info {
+      width: 100%;
+      margin-left: 2%;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 40px;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+
+        ul {
+          list-style: none;
+          gap: 20px;
+        }
+      }
+
+      .listInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        justify-content: space-around;
+      }
+    }
+
+    .sinopse {
+      width: 70%;
+      text-align: justify;
+    }
+  }
+
+  .closeModal {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    :hover {
+      cursor: pointer;
+    }
+  };
+}

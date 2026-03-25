@@ -1,6 +1,6 @@
 import { MovieDetailsContext } from "./movieDetailsContext";
 import {useState, type ReactNode} from "react";
-import type { Movie} from "../types/movieType";
+import type { Movie } from "../types/movieType";
 
 
 type SelectProviderProps = {
