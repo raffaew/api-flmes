@@ -7,6 +7,8 @@
   position: fixed;
   top: 10%;
   color: #fff;
+  z-index: 999;
+  border: 1px solid #424343;
 
   &.hide {
     display: none;
@@ -27,7 +29,11 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.699);
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.89),
+        rgba(0, 0, 0, 0.479)
+      );
     }
   }
 
@@ -41,7 +47,7 @@
       width: 300px;
     }
 
-    .info {
+    .full-info {
       width: 100%;
       margin-left: 2%;
       display: flex;
@@ -49,29 +55,49 @@
       flex-direction: column;
       gap: 40px;
 
-      .title {
+      .title-tagline {
+        .tagline {
+          color: #7c7c7c;
+          font-style: italic;
+        }
+      }
+
+      .info {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: start;
 
-        ul {
+        .listInfo {
           list-style: none;
           gap: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-around;
         }
-      }
 
-      .listInfo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+         .vote_average {
+          display: flex;
+          align-items: center;
+          gap: 10px;
 
-        justify-content: space-around;
+          .faStar {
+            color: goldenrod;
+            text-align: center;
+          }
+
+        }
+
+        .origin_country, .original_language {
+          font-size: 12px;
+        }
+
+        
       }
     }
 
     .sinopse {
-      width: 70%;
       text-align: justify;
     }
   }
@@ -80,9 +106,56 @@
     position: absolute;
     top: 2%;
     right: 2%;
+    font-size: 30px;
 
     :hover {
       cursor: pointer;
     }
-  };
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .movieDetails {
+    width: 90%;
+
+    .backdrop {
+      img {
+        object-fit: cover;
+
+      }
+    }
+
+      .details {
+      img {
+        display: none;
+      }
+      .full-info {
+      .title-tagline {
+        font-size: 12px;
+      }
+
+      .info {
+   
+
+        .listInfo {
+      font-size: 12px;
+        }
+
+        .vote_average {
+         font-size: 12px;
+        }
+
+      }
+    }
+      .sinopse{
+          font-size: 12px;
+        }
+    }
+  
+  }
+  
 }

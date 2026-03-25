@@ -10,6 +10,7 @@ type SelectProviderProps = {
 export const MovieDetailsProvider = ({children} :SelectProviderProps) => {
     const [movieDetails, setMovieDetails] = useState<Movie | null>(null);
 
+
     return(
         <MovieDetailsContext.Provider value={{movieDetails, setMovieDetails}}>
             {children}

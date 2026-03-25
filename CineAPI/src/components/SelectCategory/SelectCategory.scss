@@ -18,6 +18,17 @@
   option {
     background-color: transparent;
     color: #fff;
-   
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .categories {
+    .menu {
+      font-size: 14px;
+      width: 170px;
+    }
+    option {
+      font-size: 10px;
+    }
   }
 }

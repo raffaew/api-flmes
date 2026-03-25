@@ -23,6 +23,9 @@ export interface Movie {
   genres: Genre[];
   origin_country: origin_country[];
   runtime: number;
+  original_language: string;
+  tagline: string;
+
 }
 
 export interface ListMovies {
@@ -46,5 +49,4 @@ export interface MovieContextType {
 export interface MovieDetailsContextType {
   movieDetails: Movie | null;
   setMovieDetails: React.Dispatch<React.SetStateAction<Movie | null>>;
-  
 }

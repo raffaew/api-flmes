@@ -8,7 +8,6 @@ const Header = () => {
       <div className="nav">
       <ul>
         <li><SelectCategory /></li>
-        <li>TV Show</li>
       </ul>
       </div>
      

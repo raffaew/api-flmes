@@ -9,7 +9,7 @@ const Movies = () => {
   const [movies, setMovies] = useState<ListMovies | null>(null);
   const [page, setPage] = useState<number>(1);
   const { category } = useSelectContext();
-  const { setMovieDetails,  } = useDetailsContext();
+  const { setMovieDetails } = useDetailsContext();
 
 
   useEffect(() => {
@@ -35,6 +35,8 @@ const Movies = () => {
     } catch (error) {
       console.log(error);
     }
+
+
   }
 
   const scrollToTop = () => {
@@ -58,7 +60,6 @@ const Movies = () => {
     }
   };
 
-
   return (
    
     <div className="movies">
@@ -70,13 +71,19 @@ const Movies = () => {
               className="poster"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             />
-            <p className="title">{movie.original_title}</p>
-            <p className="date">{new Date(movie.release_date).toLocaleDateString()}</p>
+            <div className="infos">
+              <p className="title">{movie.original_title}</p>
+              <p className="date">{new Date(movie.release_date).toLocaleDateString()}</p>
+            </div>
+            
           </li>
         ))}
       </ul>
-      {page > 1 && <button onClick={prevPage}>Prev Page</button>}
+      <div className="buttons">
+        {page > 1 && <button onClick={prevPage}>Prev Page</button>}
       <button onClick={nextPage}>Next Page</button>
+      </div>
+      
     </div>
   );
 };

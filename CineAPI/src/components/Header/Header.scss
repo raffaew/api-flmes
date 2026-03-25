@@ -19,11 +19,18 @@
       display: flex;
       width: 100%;
       justify-content: space-around;
-      
-
-      li {
-       
-      }
     }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    h1 {
+     font-size: 20px;
+      width: 140px;
+    }
+   .nav {
+   width: 100%;
+   }
   }
 }
